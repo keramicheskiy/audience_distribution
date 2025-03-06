@@ -3,9 +3,7 @@
 
 
 
-
-
-
+ll = Post.query.all()
 
 
 

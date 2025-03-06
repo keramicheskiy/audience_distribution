@@ -2,12 +2,14 @@ from django.db import models
 
 
 class Lectorium(models.Model):
-    number = models.IntegerField() # номер аудитории с буквами
-    location = models.CharField(max_length=100) # TODO DB номер/название корпуса
+    id = models.IntegerField(primary_key=True)
+    number = models.IntegerField()
+    location = models.IntegerField()
     size = models.IntegerField()
-    type = models.IntegerField() # ENUM (Аудитория, комната для пз и тд)
+    type = models.IntegerField()
     equipment = [] # TODO DB (компьютеры, ничего и тд)
     description = models.CharField(max_length=300)
+    organization = models.IntegerField()
 
 
     def get_id(self):
